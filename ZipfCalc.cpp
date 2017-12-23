@@ -63,9 +63,9 @@
       std::sort(vec.begin(), vec.end(), data2);
       std::ofstream printOut;
       printOut.open("completed-"+filename);
-      printOut << "Total Words: " << vec.size() << "\n";
+      printOut << "Total Words: " << vec.size() << "\n" << "------------------------\n";
       for(int ct = 0; ct < vec.size(); ct++){
-        printOut << "------------------------\n" << "Word: " << vec[ct].readWord << "\nCount: " << vec[ct].countWord << "\n" << "------------------------\n";
+        printOut << "Word: " << vec[ct].readWord << "\nCount: " << vec[ct].countWord << "\n" << "------------------------\n";
       }
       printOut.close();
       return 0;
