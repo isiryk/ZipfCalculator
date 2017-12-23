@@ -1,6 +1,8 @@
 #include <iostream>
+#include <string>
 
 int main(int argc, char* argv[]){
-  std::cout << argv[1] << std::endl;
+  std::string filename = argv[1];
+  std::cout << "This is the filename: " << filename << "\n";
   return 0;
 }
