@@ -15,17 +15,19 @@
 
   void counter(std::string word){
     bool state = false;
-    auto exists = [&](const std::string &s){
-      state = std::find_if(begin(vec), end(vec), [&](const data &f){return f.readWord == word;}) != end(vec);
-      std::cout << state;
-    };
-    if(state == true){
-      int k = 0;
-      while(vec[k].readWord != word){
-        k++;
+    int wordVal = 0;
+    for(int ct = 0; ct < vec.size(); ct++){
+      if(vec[ct].readWord == word){
+        wordVal = ct;
+        state = true;
+        break;
+      }else{
+        ct++;
       }
-      std::cout << vec[k].readWord;
-      vec[k].countWord++;
+    }
+    if(state == true){
+      std::cout << vec[wordVal].readWord;
+      vec[wordVal].countWord++;
       state = false;
     } else {
       data val;
