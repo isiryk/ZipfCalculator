@@ -26,7 +26,6 @@
       }
     }
     if(state == true){
-      std::cout << vec[wordVal].readWord;
       vec[wordVal].countWord++;
       state = false;
     } else {
@@ -48,6 +47,7 @@
       int count = 0;
       while(inFile >> word){
         word.erase(std::remove_if(word.begin(), word.end(), ispunct), word.end());
+        word.toLowerCase();
         counter(word);
       }
     }
@@ -58,10 +58,10 @@
       std::string filename = argv[1];
       std::cout << "This is the filename: " << filename << "\n";
       readFile(filename);
-      // for(int ct = 0; ct < vec.size(); ct++){
-      //   std::cout << "ReadWord: " << vec[ct].readWord << "\n";
-      //   std::cout << "Count: " << vec[ct].countWord << "\n";
-      // }
+      for(int ct = 0; ct < vec.size(); ct++){
+        std::cout << "ReadWord: " << vec[ct].readWord << "\n";
+        std::cout << "Count: " << vec[ct].countWord << "\n";
+      }
       return 0;
     } else {
       std::cout << "Please include filename as an argument" << "\n";
