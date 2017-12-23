@@ -13,3 +13,12 @@ Implementation:
   I will be using C++ to implement this. What I will do is take in a piece of user text specified
   during program launch. Go through all of the words and then rank them according to their frequency
   and print out a file with the sorted list.
+
+Running the Program
+  Simple, in your terminal just run: ./ZipfCalc "filename" and it will do the rest.
+
+Assumptions
+  I assume the case of you using this is you are providing a file with text inside. I will take that text
+  break it down into a file of all the unique words grouped together and saying how much times each
+  word appears. There is very little protection in this program against edge cases you may encounter so
+  use at your own risk. Only tested on Ubuntu 16.04. Thank you for checking out my program :).
