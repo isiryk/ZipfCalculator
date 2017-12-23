@@ -7,9 +7,10 @@ void readFile(std::string filename){
   std::ifstream inFile;
   inFile.open(filename.c_str());
   inFile.close();
-  std::cout << "Success" << "\n";
   if(!inFile){
     std::cout << "Please enter a valid filename" << "\n";
+  } else {
+    std::cout << "Success" << "\n";
   }
 }
 
