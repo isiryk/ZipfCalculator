@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include <iomanip>
+#include <algorithm>
 
 void readFile(std::string filename){
   std::ifstream inFile;
@@ -13,9 +14,8 @@ void readFile(std::string filename){
     std::string word;
     int count = 0;
     while(inFile >> word){
-      count++;
+      word.erase(std::remove_if(word.begin(), word.end(), ispunct), word.end());
     }
-    std::cout << "Total words: " << count << "\n";
   }
 }
 
