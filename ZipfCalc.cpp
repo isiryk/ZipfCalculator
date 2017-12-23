@@ -6,11 +6,16 @@
 void readFile(std::string filename){
   std::ifstream inFile;
   inFile.open(filename.c_str());
-  inFile.close();
   if(!inFile){
     std::cout << "Please enter a valid filename" << "\n";
   } else {
     std::cout << "Success" << "\n";
+    std::string word;
+    int count = 0;
+    while(inFile >> word){
+      count++;
+    }
+    std::cout << "Total words: " << count << "\n";
   }
 }
 
